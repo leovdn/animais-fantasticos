@@ -9,12 +9,14 @@
 </head>
 
 <body>
+  <div class="grid-container">
   <nav class="menu" data-anime="js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contato">Contato</a></li>
       <li><a href="https://github.com/leovdn" target="_blank">Dev →</a></li>
+      <li><a data-modal="open" href="login.html" target="_blank">LOGIN</a></li>
     </ul>
   </nav>
   <section class="grid-section animais" data-anime="scroll" id="animais">
@@ -182,6 +184,19 @@
   <footer class="copy">
     <p>All rights reserved</p>
   </footer>
+</div>
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="close" class="close">X</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" for="email" id="email">
+        <label for="senha">Senha</label>
+        <input type="password" for="senha" id="senha">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
 
   <script type="module" src="js/script.js"></script>
 </body>
