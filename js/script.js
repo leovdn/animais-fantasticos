@@ -4,6 +4,8 @@ import animateScroll from './modules/scroll-animation.js';
 import smooth from './modules/smooth-animation.js';
 import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
+import initDropdownMenu from './modules/dropdown-menu.js';
+
 
 animateMenu();
 accordion();
@@ -11,3 +13,4 @@ animateScroll();
 smooth();
 initModal();
 initTooltip();
+initDropdownMenu();
