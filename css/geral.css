@@ -179,6 +179,21 @@ body {
     height: 10px;
 }
 
+.openingHour::after {
+    display: inline-block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #e54;
+    border-radius: 50%;
+    margin-left: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.6) ;
+}
+
+.opened::after {
+    background: #3F4;    
+}
+
 .copy {
     grid-column:  3 / 5;
     margin-bottom: 2rem;
@@ -306,3 +321,4 @@ body {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
+
