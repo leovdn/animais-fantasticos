@@ -8,6 +8,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initOpeningHour from './modules/openinghour.js';
 import initFetchAnimais from './modules/fetch-animais.js';
+import initFetchBictoin from './modules/fetch-bitcoin.js';
 
 animateMenu();
 accordion();
@@ -19,3 +20,4 @@ initDropdownMenu();
 initMenuMobile();
 initOpeningHour();
 initFetchAnimais();
+initFetchBictoin();
