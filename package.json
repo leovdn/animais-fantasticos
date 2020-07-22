@@ -1,0 +1,36 @@
+{
+  "name": "animais-fantasticos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "save-dev": "0.0.1-security",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "whatwg-fetch": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leovdn/animais-fantasticos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leovdn/animais-fantasticos/issues"
+  },
+  "homepage": "https://github.com/leovdn/animais-fantasticos#readme"
+}
