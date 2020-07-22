@@ -1,5 +1,5 @@
 import animateMenu from './modules/menu-animation.js';
-import accordion from './modules/accordion.js';
+import Accordion from './modules/accordion.js';
 import animateScroll from './modules/scroll-animation.js';
 import SmoothScroll from './modules/smooth-animation.js';
 import initModal from './modules/modal.js';
@@ -13,8 +13,10 @@ import initFetchBictoin from './modules/fetch-bitcoin.js';
 const smoothScroll = new SmoothScroll('[data-anime="js-menu"] a[href^="#"]');
 smoothScroll.init();
 
+const accordion = new Accordion('[data-anime="accordion"] dt');
+accordion.init();
+
 animateMenu();
-accordion();
 animateScroll();
 initModal();
 initTooltip();
