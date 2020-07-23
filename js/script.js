@@ -1,6 +1,6 @@
 import TabNav from './modules/menu-animation.js';
 import Accordion from './modules/accordion.js';
-import animateScroll from './modules/scroll-animation.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import SmoothScroll from './modules/smooth-animation.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
@@ -8,7 +8,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initOpeningHour from './modules/openinghour.js';
 import fetchAnimais from './modules/fetch-animais.js';
-import initFetchBictoin from './modules/fetch-bitcoin.js';
+import fetchBictoin from './modules/fetch-bitcoin.js';
 
 const smoothScroll = new SmoothScroll('[data-anime="js-menu"] a[href^="#"]');
 smoothScroll.init();
@@ -25,10 +25,13 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-animateScroll();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
 initDropdownMenu();
 initMenuMobile();
 initOpeningHour();
-initFetchBictoin();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
+
+fetchBictoin('https://blockchain.info/ticker', '.btc-preco');
