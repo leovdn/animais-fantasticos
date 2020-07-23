@@ -2,8 +2,8 @@ import TabNav from './modules/menu-animation.js';
 import Accordion from './modules/accordion.js';
 import animateScroll from './modules/scroll-animation.js';
 import SmoothScroll from './modules/smooth-animation.js';
-import initModal from './modules/modal.js';
-import initTooltip from './modules/tooltip.js';
+import Modal from './modules/modal.js';
+import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initOpeningHour from './modules/openinghour.js';
@@ -19,9 +19,13 @@ accordion.init();
 const tabNav = new TabNav('[data-anime="menu"] li', '[data-anime="content"] section');
 tabNav.init();
 
+const modal = new Modal('[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]');
+modal.init();
+
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
+
 animateScroll();
-initModal();
-initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initOpeningHour();
