@@ -1,14 +1,14 @@
 import TabNav from './modules/menu-animation.js';
 import Accordion from './modules/accordion.js';
-import animateScroll from './modules/scroll-animation.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import SmoothScroll from './modules/smooth-animation.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdownMenu from './modules/dropdown-menu.js';
-import initMenuMobile from './modules/menu-mobile.js';
-import initOpeningHour from './modules/openinghour.js';
-import initFetchAnimais from './modules/fetch-animais.js';
-import initFetchBictoin from './modules/fetch-bitcoin.js';
+import DropdownMenu from './modules/dropdown-menu.js';
+import MenuMobile from './modules/menu-mobile.js';
+import OpeningHour from './modules/openinghour.js';
+import fetchAnimais from './modules/fetch-animais.js';
+import fetchBictoin from './modules/fetch-bitcoin.js';
 
 const smoothScroll = new SmoothScroll('[data-anime="js-menu"] a[href^="#"]');
 smoothScroll.init();
@@ -25,9 +25,18 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-animateScroll();
-initDropdownMenu();
-initMenuMobile();
-initOpeningHour();
-initFetchAnimais();
-initFetchBictoin();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
+dropdownMenu.init();
+
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
+const openingHour = new OpeningHour('[data-week]', 'opened');
+openingHour.init();
+
+fetchAnimais('./animaisapi.json', '.numeros-grid');
+
+fetchBictoin('https://blockchain.info/ticker', '.btc-preco');
