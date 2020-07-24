@@ -236,7 +236,7 @@ body {
     }
 
     .grid-section h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .menu {
@@ -292,12 +292,19 @@ body {
 }
 
 [data-anime="accordion"] dt::after {
-    content: "⬎";
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(../img/arrow-red.svg) no-repeat center center;
+    transform: rotate(90deg);
     margin-left: 10px;
+    transition: transform 300ms;
 }
 
 [data-anime="accordion"] dt.active::after {
-    content: "⬏";
+    content: "";
+    transform: rotate(-90deg);
 }
 
 
@@ -329,3 +336,9 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
+.arrow-black {
+    background: url('../img/arrow-black.svg') no-repeat center center;
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+}
