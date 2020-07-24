@@ -9,6 +9,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import OpeningHour from './modules/openinghour.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBictoin from './modules/fetch-bitcoin.js';
+import SlideNav from './modules/slide.js';
 
 const smoothScroll = new SmoothScroll('[data-anime="js-menu"] a[href^="#"]');
 smoothScroll.init();
@@ -40,3 +41,7 @@ openingHour.init();
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
 fetchBictoin('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
